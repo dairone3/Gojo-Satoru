@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3hjhsr56cai1"]
 
 [ext_resource type="Texture2D" uid="uid://hnic8s0vgxoa" path="res://sprites/green_xy.png" id="1_xsjyq"]
-[ext_resource type="Script" path="res://Scripts/TileSprite.cs" id="2_rvq8p"]
+[ext_resource type="Script" uid="uid://csljqkcdbgy2i" path="res://Scripts/TileSprite.cs" id="2_rvq8p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rvq8p"]
 size = Vector2(72, 72)
