@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://3hjhsr56cai1"]
+
+[ext_resource type="Texture2D" uid="uid://hnic8s0vgxoa" path="res://sprites/green_xy.png" id="1_xsjyq"]
+
+[node name="Tile" type="Sprite2D"]
+position = Vector2(46, 38)
+texture = ExtResource("1_xsjyq")
+centered = false
+
+[node name="Node2D" type="Node2D" parent="."]

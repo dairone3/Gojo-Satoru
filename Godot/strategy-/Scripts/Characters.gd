@@ -1,18 +1,18 @@
 extends CharacterBody2D
 
 @export var speed = 800
-var target = position
+var target = Vector2i()
 
-var astargrid = AStarGrid2D.new()
+var astar = AStar2D.new()
 
 func _ready():
-	astargrid.region = Rect2i(10,10,0,0)
-	astargrid.cell_size = Vector2(72,72)
-	astargrid.update()
+	return
+	
+	#astargrid.update()
 #@onready var player = $player
 
 func _input(event):
-	if event.is_action_pressed(&"Left mouse"):
+	if event.is_action_pressed("Left mouse"):
 		target = get_global_mouse_position()
 		
 func _physics_process(delta):

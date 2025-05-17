@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://csrxnu0ghhf5f"]
 
-[ext_resource type="Script" uid="uid://d8y1478rcwko" path="res://Scripts/menu_bg.gd" id="1_48smj"]
+[ext_resource type="Script" uid="uid://d8y1478rcwko" path="res://Scripts/UI/Main_Menu_Scripts/menu_bg.gd" id="1_48smj"]
 [ext_resource type="Texture2D" uid="uid://dmm6bsrt78ssv" path="res://sprites/BG_DesertMountains/background1.png" id="1_ctex1"]
 [ext_resource type="Texture2D" uid="uid://de2v6kuth5uyw" path="res://sprites/BG_DesertMountains/background2.png" id="2_hslqp"]
 [ext_resource type="Texture2D" uid="uid://dhbhmx54n7rw5" path="res://sprites/BG_DesertMountains/background3.png" id="3_vnrag"]
