@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b63i8xffne6lj"]
+[gd_scene load_steps=5 format=3 uid="uid://b63i8xffne6lj"]
 
 [ext_resource type="Texture2D" uid="uid://bmqhnqc276ck4" path="res://sprites/ivan_zolo.png" id="1_88kja"]
 [ext_resource type="Script" uid="uid://dnqw1o6wk35u1" path="res://Scripts/basic_player.gd" id="1_it8n0"]
 [ext_resource type="Script" uid="uid://d3ct7p713qjlo" path="res://Scripts/Sprite2d.cs" id="3_it8n0"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ewmi8"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Basic_player" type="CharacterBody2D"]
 script = ExtResource("1_it8n0")
@@ -13,3 +18,6 @@ texture = ExtResource("1_88kja")
 script = ExtResource("3_it8n0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_ewmi8")

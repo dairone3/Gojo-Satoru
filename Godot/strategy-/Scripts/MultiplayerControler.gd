@@ -17,6 +17,7 @@ func peer_connected(id):
 	#this get called on the server and clients
 func peer_disconnected(id):
 	print("Player Disconnected " + str(id))
+	GameManager.Players.erase(id)
 	
 	#this called only from clients
 func connected_to_server():
