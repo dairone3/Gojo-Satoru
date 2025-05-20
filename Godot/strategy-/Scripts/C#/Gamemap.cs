@@ -6,16 +6,15 @@ namespace Strategy.Scripts;
 public class Gamemap
 {
 	private Dictionary<Vector2I, TileSprite> _tileCoords = new Dictionary<Vector2I, TileSprite>();
-	private Dictionary<Vector2I, PlayerSprite> _playerCoords = new Dictionary<Vector2I, PlayerSprite>();
 	
 	
-	public void CreateMap(int Width, int Height, PackedScene TileScene, Main main)
+	public void CreateMap(int width, int height, PackedScene tileScene, Main main)
 	{
-		for (int h = 0; h < Height; h++)
+		for (int h = 0; h < height; h++)
 		{
-			for (int w = 0; w < Width; w++)
+			for (int w = 0; w < width; w++)
 			{
-				Node2D tile = this.CreateTile(w, h, TileScene);
+				Node2D tile = this.CreateTile(w, h, tileScene);
 				main.AddChild(tile);
 			}
 		}
@@ -47,7 +46,6 @@ public class Gamemap
 		PlayerSprite playerInstance = playerScene.Instantiate<PlayerSprite>();
 		Vector2I playerCoord = new Vector2I(x, y);
 		// playerInstance.SetCoordinatePosition(x,y);
-		_playerCoords[playerCoord] = playerInstance;
 		main.AddChild(playerInstance);
 		return playerInstance;
 	}

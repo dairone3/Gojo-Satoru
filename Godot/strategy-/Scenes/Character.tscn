@@ -1,12 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://yb0my3bypx2b"]
+[gd_scene load_steps=3 format=3 uid="uid://yb0my3bypx2b"]
 
-[ext_resource type="Script" uid="uid://cohha3v5wk1dq" path="res://Scripts/Units_scripts/Main_Unit.gd" id="1_677pu"]
 [ext_resource type="Texture2D" uid="uid://c1qh8ppyawyso" path="res://sprites/peasant-attack1.png" id="2_v7dgu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgqql"]
 
 [node name="player" type="CharacterBody2D"]
-script = ExtResource("1_677pu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(36, 41)

@@ -31,14 +31,10 @@ public partial class Main : Node2D
 		PlayerSprite player2 = App.Map.CreatePlayer(Player2Position.X, Player2Position.Y, Player2Scene, this);
 		player2.MoveTo(App.Map.GetTile(Player2Position.X, Player2Position.Y));
 		
-		App.GameControll = new GameControll(player1, player2,Player1Position, Player2Position);
+		App.GameEngine = new GameEngine(player1, player2);
 	}
-	
-
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
 	}
-	
 }
