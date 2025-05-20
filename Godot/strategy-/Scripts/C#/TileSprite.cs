@@ -9,6 +9,7 @@ public partial class TileSprite : Sprite2D
 	[Export]
 	public int Height{get;set;}
 	public Vector2I Cood{get;set;}
+	public PlayerSprite Player{get;set;} 
 
 
 	// Called when the node enters the scene tree for the first time.
@@ -24,7 +25,7 @@ public partial class TileSprite : Sprite2D
 
 	public bool IsFree()
 	{
-		if (App.GameControll.Player1Coord == this.Cood || App.GameControll.Player2Coord == this.Cood)
+		if (Player != null)
 		{
 			return false;
 		}
@@ -44,7 +45,8 @@ public partial class TileSprite : Sprite2D
 				{
 					GD.Print($"Tile coord :{Cood}  Tile position:{Position}");
 					// Your click logic here
-					App.GameControll.MovePlayer(this);
+					 App.GameEngine.MovePlayer(this);
+					 
 				}
 			}
 
