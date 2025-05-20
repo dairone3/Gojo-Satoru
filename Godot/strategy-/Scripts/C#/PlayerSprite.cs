@@ -4,6 +4,7 @@ using Strategy.Scripts;
 
 public partial class PlayerSprite : Sprite2D
 {
+    
     [Export]
     public int Width{get;set;}
     [Export]

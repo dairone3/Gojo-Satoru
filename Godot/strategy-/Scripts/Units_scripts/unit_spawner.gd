@@ -12,6 +12,7 @@ var unit6
 var unit7
 var unit8 
 var unit9 
+
 func _ready() -> void:
 	spawn_unit(Vector2(0, 0))
 	
@@ -31,4 +32,5 @@ func spawn_unit(pos: Vector2):
 	unit_move(Vector2(288,144))
 	
 func unit_move(pos: Vector2):
+	print(pos)
 	unit.position = pos

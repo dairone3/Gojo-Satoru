@@ -21,6 +21,7 @@ text = "Host
 "
 
 [node name="Join" type="Button" parent="."]
+layout_mode = 0
 offset_left = 262.0
 offset_top = 102.0
 offset_right = 396.0
@@ -28,6 +29,7 @@ offset_bottom = 138.0
 text = "Join"
 
 [node name="StartGame" type="Button" parent="."]
+layout_mode = 0
 offset_left = 434.0
 offset_top = 101.0
 offset_right = 568.0

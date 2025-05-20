@@ -45,7 +45,8 @@ public partial class TileSprite : Sprite2D
 				{
 					GD.Print($"Tile coord :{Cood}  Tile position:{Position}");
 					// Your click logic here
-					App.GameEngine.MovePlayer(this);
+					 App.GameEngine.MovePlayer(this);
+					 
 				}
 			}
 
