@@ -7,6 +7,7 @@ public partial class MultiplayerController : Control
 	private int port = 8910;
 	[Export]
 	private string address = "127.0.0.1";
+	public long Id {get; set;}
 
 	private ENetMultiplayerPeer peer;
 	// Called when the node enters the scene tree for the first time.
@@ -37,6 +38,7 @@ public partial class MultiplayerController : Control
 	// id = id of the player who connects
 	private void PeerConnected(long id)
 	{
+		this.Id = id;
 		GD.Print("Peer connected" + id.ToString());
 	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -70,6 +72,16 @@ public partial class MultiplayerController : Control
 
 	public void _on_start_game_button_down()
 	{
-		
+		Rpc("startGame");
 	}
+
+	[Rpc(MultiplayerApi.RpcMode.AnyPeer, CallLocal = true, TransferMode = MultiplayerPeer.TransferModeEnum.Reliable)]
+	private void startGame()
+	{
+		var scene = ResourceLoader.Load<PackedScene>("res://Scenes/main.tscn").Instantiate<Node2D>();
+		GetTree().Root.AddChild(scene);
+		this.Hide();
+	}
+
+
 }

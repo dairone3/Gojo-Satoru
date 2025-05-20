@@ -31,8 +31,8 @@ script = ExtResource("2_8gbba")
 TileScene = ExtResource("2_kry3j")
 Player1Scene = ExtResource("2_bo1nx")
 Player2Scene = ExtResource("5_344ge")
-Width = 15
-Height = 10
+Width = 11
+Height = 9
 Player1Position = Vector2i(2, 2)
 Player2Position = Vector2i(4, 4)
 
@@ -107,6 +107,7 @@ offset_bottom = 569.5
 theme_override_font_sizes/font_size = 20
 text = "HP:"
 script = ExtResource("10_6iyac")
+metadata/_edit_use_anchors_ = true
 
 [node name="Turn" type="Label" parent="TileMapLayer/UI/PlayerUI/MainUI/TextureRect"]
 layout_mode = 0
@@ -117,6 +118,7 @@ offset_bottom = 454.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Nope
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="mp_bar" type="Label" parent="TileMapLayer/UI/PlayerUI/MainUI/TextureRect"]
 layout_mode = 0
@@ -127,6 +129,7 @@ offset_bottom = 592.5
 theme_override_font_sizes/font_size = 20
 text = "MP: "
 script = ExtResource("11_fdnlq")
+metadata/_edit_use_anchors_ = true
 
 [node name="player_icon" type="TextureRect" parent="TileMapLayer/UI/PlayerUI/MainUI/TextureRect"]
 layout_mode = 0
@@ -136,6 +139,7 @@ offset_right = 164.0
 offset_bottom = 677.0
 texture = ExtResource("12_jkdf5")
 script = ExtResource("12_fdnlq")
+metadata/_edit_use_anchors_ = true
 
 [node name="UnitSpawner" type="Node" parent="."]
 

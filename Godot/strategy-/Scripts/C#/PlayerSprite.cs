@@ -11,8 +11,7 @@ public partial class PlayerSprite : Sprite2D
     public int Height{get;set;}
     public Vector2I Coord{get;set;}
     public string Name{get;set;}
-    public TileSprite Tile{get;set;} 
-    
+    public TileSprite Tile{get;set;}
     
     public void SetCoordinatePosition(int x, int y)
     {
@@ -29,6 +28,7 @@ public partial class PlayerSprite : Sprite2D
         {
             this.Tile.Player = null;
         }
+
         this.Coord = tile.Cood;
         this.Position = tile.Position;
         this.Tile = tile;
