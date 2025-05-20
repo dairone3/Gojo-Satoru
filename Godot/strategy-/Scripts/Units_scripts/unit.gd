@@ -73,7 +73,7 @@ func taken_damage(hp: int, damage: int):
 	
 func use_mp(mp:int, cost: int):
 	mp -= cost
-	if mp >= 0:		
+	if mp >= 0:
 		return(mp)
 	else:
 		print ("cant move")
