@@ -63,17 +63,19 @@ func set_die(unit):
 	unit.queue_free()
 		
 	
-func taken_damage(hp: int, damage: int):
+func taken_damage(hp: int, damage: int, max_hp: int):
 	hp -= damage
 	if die(hp) == false:
 		print("не почуствовав")
+		$TileMapLayer/UI/PlayerUI/MainUI/TextureRect/hp_bar.setHP(hp, max_hp)
 		return hp
 	else: 
-		return -1
+		pass
 	
-func use_mp(mp:int, cost: int):
+func use_mp(mp:int, cost: int, max_mp):
 	mp -= cost
-	if mp >= 0:		
+	if mp >= 0:
+		$TileMapLayer/UI/PlayerUI/MainUI/TextureRect/mp_bar.setMP(mp, max_mp)		
 		return(mp)
 	else:
 		print ("cant move")
