@@ -10,3 +10,6 @@ git checkout -b <name> - створює нову гілку та переход�
 git checkout master - переходить в гілку master
 git merge hotfix - зливає hotfix до master
 git branch -d hotfix - видаляє гілку hotfix
+
+glep
+glep2
